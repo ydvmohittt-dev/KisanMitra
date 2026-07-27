@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>KisanMitra Weather</title>
+
+    <link rel="stylesheet" href="weather.css" />
+  </head>
+
+  <body>
+    <header class="main-header">
+      <div class="logo"><a href="index.html"> KisanMitra</a></div>
+      <nav class="top-nav">
+        <a href="#" class="nav-link active">Home</a>
+        <a href="#" class="nav-link">Services</a>
+        <a href="weather.html" class="weather nav-link">Weather</a>
+        <a href="#" class="nav-link">Community</a>
+        <a href="#" class="nav-link">About Us</a>
+      </nav>
+    </header>
+
+    <section class="weather-search">
+      <div class="hero-left">
+        <div class="hero-heading">
+          <img src="icons/weathericon2.jpg" alt="Weather Icon" />
+
+          <h1>Weather Forecast</h1>
+        </div>
+
+        <p class="hero-description">Know your weather. Plan your farming</p>
+      </div>
+
+      <div class="hero-right">
+        <form class="weather-form">
+          <div class="form-group">
+            <label for="state"> Enter Your State </label>
+
+            <input id="state" type="text" placeholder="Enter your state" />
+          </div>
+
+          <div class="form-group">
+            <label for="city"> Enter Your City </label>
+
+            <input id="city" type="text" placeholder="Enter your city" />
+          </div>
+
+          <div class="form-group">
+            <label for="village"> Enter Your Village </label>
+
+            <input id="village" type="text" placeholder="Enter your village" />
+          </div>
+
+          <button class="submit-btn" type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="weather-section">
+      <div class="weather-card">
+        <div class="weather-header">
+          <div>
+            <h2>Panipat, Haryana</h2>
+
+            <p>Today, 22 July 2026</p>
+          </div>
+        </div>
+
+        <div class="weather-content">
+          <div class="temperature-box">
+            <div class="weather-icon">
+              <img height="150px" width="150px" src="icons/weathericon2.jpg" alt="" />
+            </div>
+
+            <h1>34°C</h1>
+
+            <h3>Partly Cloudy</h3>
+
+            <p>Feels like 36°C</p>
+          </div>
+
+          <div class="weather-details">
+            <div class="detail">
+              <span class="detail-icon">
+                <img
+                  height="25px"
+                  width="25px"
+                  src="icons/humidity_icon.jpg"
+                  alt="humidity" />
+              </span>
+
+              <span> Humidity </span>
+
+              <strong> 45% </strong>
+            </div>
+
+            <div class="detail">
+              <span class="detail-icon">
+                <img
+                  height="25px"
+                  width="25px"
+                  src="icons/wind_icon.jpg"
+                  alt="Wind" />
+              </span>
+
+              <span> Wind </span>
+
+              <strong> 18 km/h </strong>
+            </div>
+
+            <div class="detail">
+              <span class="detail-icon">
+                <img
+                  height="30px"
+                  width="30px"
+                  src="icons/rain_icon.jpg"
+                  alt="rain" />
+              </span>
+
+              <span> Rain Chance </span>
+
+              <strong> 20% </strong>
+            </div>
+
+            <div class="detail">
+              <span class="detail-icon">
+                <img
+                  height="30px"
+                  width="30px"
+                  src="icons/uv_index_icon.jpg"
+                  alt="Uv" />
+              </span>
+
+              <span> UV Index </span>
+
+              <strong> 6 (High) </strong>
+            </div>
+
+            <div class="detail">
+              <span class="detail-icon">
+                <img height="25px" width="25px" src="icons/visibility_icon.jpg" />
+              </span>
+
+              <span> Visibility </span>
+
+              <strong> 8 km </strong>
+            </div>
+
+            <div class="detail">
+              <span class="detail-icon">
+                <img
+                  height="25px"
+                  width="25px"
+                  src="icons/pressure _icon.jpg"
+                  alt="pressure" />
+              </span>
+
+              <span> Pressure </span>
+
+              <strong> 1008 hPa </strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="forecast-section">
+      <div class="hourly-card">
+        <div class="section-header">
+          <h2>Hourly Forecast</h2>
+        </div>
+
+        <div class="hourly-forecast">
+          <div class="hour">
+            <h3>10 AM</h3>
+            <span class="forecast-icon"
+              ><img height="35px" width="35px" src="ImagesOfWeather/sun_image.png" alt="day"
+            /></span>
+            <strong>32°C</strong>
+          </div>
+
+          <div class="hour">
+            <h3>11 AM</h3>
+            <span class="forecast-icon"
+              ><img height="35px" width="35px" src="ImagesOfWeather/sun_image.png" alt="day"
+            /></span>
+            <strong>33°C</strong>
+          </div>
+
+          <div class="hour">
+            <h3>12 PM</h3>
+            <span class="forecast-icon"
+              ><img
+                height="35px"
+                width="35px"
+                src="ImagesOfWeather/partlyclody_image.png"
+                alt="partly clode"
+            /></span>
+            <strong>34°C</strong>
+          </div>
+
+          <div class="hour">
+            <h3>1 PM</h3>
+            <span class="forecast-icon"
+              ><img
+                height="35px"
+                width="35px"
+                src="ImagesOfWeather/partlyclody_image.png"
+                alt="partly cloude"
+            /></span>
+            <strong>35°C</strong>
+          </div>
+
+          <div class="hour">
+            <h3>2 PM</h3>
+            <span class="forecast-icon"
+              ><img height="35px" width="35px" src="ImagesOfWeather/clouds.png" alt="cloude"
+            /></span>
+            <strong>35°C</strong>
+          </div>
+
+          <div class="hour">
+            <h3>3 PM</h3>
+            <span class="forecast-icon"
+              ><img height="35px" width="35px" src="ImagesOfWeather/rain_image.png" alt="rain"
+            /></span>
+            <strong>34°C</strong>
+          </div>
+
+          <div class="hour">
+            <h3>4 PM</h3>
+            <span class="forecast-icon"
+              ><img height="35px" width="35px" src="ImagesOfWeather/clouds.png" alt="cloude"
+            /></span>
+            <strong>33°C</strong>
+          </div>
+
+          <div class="hour">
+            <h3>5 PM</h3>
+            <span class="forecast-icon"
+              ><img height="35px" width="35px" src="ImagesOfWeather/clouds.png" alt="cloude"
+            /></span>
+            <strong>32°C</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-forecast">
+        <div class="weekly-card">
+          <div class="section-header">
+            <h2>7-Day Forecast</h2>
+          </div>
+
+          <div class="weekly-forecast">
+            <div class="day">
+              <h3>Today</h3>
+              <p>22 Jul</p>
+              <span
+                ><img height="35px" width="35px" src="ImagesOfWeather/sun_image.png" alt="day"
+              /></span>
+              <strong>34°C</strong>
+              <small>25°C</small>
+            </div>
+
+            <div class="day">
+              <h3>Thu</h3>
+              <p>23 Jul</p>
+              <span
+                ><img
+                  height="35px"
+                  width="35px"
+                  src="ImagesOfWeather/rain_image.png"
+                  alt="rain"
+              /></span>
+              <strong>32°C</strong>
+              <small>24°C</small>
+            </div>
+
+            <div class="day">
+              <h3>Fri</h3>
+              <p>24 Jul</p>
+              <span
+                ><img height="35px" width="35px" src="ImagesOfWeather/clouds.png" alt="cloud"
+              /></span>
+              <strong>33°C</strong>
+              <small>25°C</small>
+            </div>
+
+            <div class="day">
+              <h3>Sat</h3>
+              <p>25 Jul</p>
+              <span
+                ><img height="35px" width="35px" src="ImagesOfWeather/sun_image.png" alt="day"
+              /></span>
+              <strong>35°C</strong>
+              <small>26°C</small>
+            </div>
+
+            <div class="day">
+              <h3>Sun</h3>
+              <p>26 Jul</p>
+              <span
+                ><img
+                  height="35px"
+                  width="35px"
+                  src="ImagesOfWeather/rain_image.png"
+                  alt="rain"
+              /></span>
+              <strong>31°C</strong>
+              <small>24°C</small>
+            </div>
+
+            <div class="day">
+              <h3>Mon</h3>
+              <p>27 Jul</p>
+              <span
+                ><img
+                  height="35px"
+                  width="35px"
+                  src="ImagesOfWeather/partlyclody_image.png"
+                  alt="partlyCloud"
+              /></span>
+              <strong>34°C</strong>
+              <small>25°C</small>
+            </div>
+
+            <div class="day">
+              <h3>Tue</h3>
+              <p>28 Jul</p>
+              <span
+                ><img height="35px" width="35px" src="ImagesOfWeather/sun_image.png" alt="day"
+              /></span>
+              <strong>35°C</strong>
+              <small>26°C</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <h2>KisanMitra</h2>
+          </div>
+
+          <p>
+            Empowering farmers with technology
+            <br />
+            and trusted services.
+          </p>
+
+          <div class="social-icons">
+            <a href="#"
+              ><img
+                height="35px"
+                width="35px"
+                src="icons/facebook_icon.png"
+                alt="facebook"
+            /></a>
+            <a href="#"
+              ><img
+                height="35px"
+                width="35px"
+                src="icons/instagram_icon.png"
+                alt="instagram"
+            /></a>
+            <a href="#"
+              ><img height="35px" width="35px" src="icons/xapp_icon.png" alt="x"
+            /></a>
+            <a href="#"
+              ><img
+                height="35px"
+                width="35px"
+                src="icons/youtube_icon.png"
+                alt="youtube"
+            /></a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+
+          <a href="index.html">Home</a>
+          <a href="#">Services</a>
+          <a href="weather.html">Weather</a>
+          <a href="#">Community</a>
+          <a href="#">About Us</a>
+        </div>
+
+        <div class="footer-column">
+          <h3>Support</h3>
+
+          <a href="#">Help Center</a>
+          <a href="#">Contact Us</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+        </div>
+
+        <div class="footer-column contact-column">
+          <h3>Contact Us</h3>
+
+          <p>
+            <img
+              height="20px"
+              width="20px"
+              src="icons/phone-call_icon.png"
+              alt="mobile" />
+            &nbsp; +91 1234567890
+          </p>
+
+          <p>
+            <img height="20px" width="20px" src="icons/email_icon.png" alt="mail" />
+            &nbsp; support@kisanmitra.com
+          </p>
+
+          <p>
+            <img
+              height="20px"
+              width="20px"
+              src="icons/location_icon2.png"
+              alt="Location" />
+            &nbsp; Bhiwani, Haryana, India
+          </p>
+        </div>
+      </div>
+
+      <div class="copyright">&copy; 2026 KisanMitra. All rights reserved.</div>
+    </footer>
+    <script src="weather.js"></script>
+  </body>
+</html>
