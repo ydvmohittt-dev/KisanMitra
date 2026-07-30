@@ -64,10 +64,10 @@ body {
 
   grid-template-columns: 1fr 1fr;
 
-  background-image: url(images/weatherimage.jpg);
+  background-image: url(images/weatherimage.png);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 50% 25%;
+  background-position: 50% 60%;
 
   position: relative;
 
@@ -81,7 +81,7 @@ body {
 
   inset: 0;
 
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(186, 166, 166, 0.25);
 }
 
 .hero-left,
