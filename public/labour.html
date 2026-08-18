@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Kisan Mitra - Labour</title>
+
+    <link rel="stylesheet" href="labour.css" />
+  </head>
+
+  <body>
+   <header class="main-header">
+      <div class="logo"><a href="index.html"> KisanMitra</a></div>
+      <nav class="top-nav">
+        <a href="#" class="nav-link active">Home</a>
+        <a href="#" class="nav-link">Services</a>
+        <a href="weather.html" class="nav-link">Weather</a>
+        <a href="#" class="nav-link">Community</a>
+        <a href="#" class="nav-link">About Us</a>
+      </nav>
+    </header>
+
+    <main class="main-container">
+     
+      <div class="intro">
+      <div class="block1">
+        <p>Hire Labour</p>
+
+        <h2>Find Skilled and reliable labour near you.</h2>
+        
+      </div>
+     
+    </div>
+
+      <section class="table-container">
+        <div class="table-top">
+            <div>
+
+          <h2>Available Labour</h2>
+
+          <span id="labourCount" class="labour-count"> Loading... </span>
+          </div>
+         <div><button class="add-button" onclick="openLabourModal()">
+          + Add Yourself
+        </button>
+        </div>
+        </div>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+
+                <th>Village</th>
+
+                <th>Age</th>
+
+                <th>Work Type</th>
+
+                <th>Experience</th>
+
+                <th>Expected Salary</th>
+
+                <th>Availability</th>
+
+                <th>Contact</th>
+
+                <th>Action</th>
+              </tr>
+            </thead>
+
+            <tbody id="labourTableBody"></tbody>
+          </table>
+
+          <div id="loading" class="loading">Loading labour...</div>
+
+          <div id="emptyState" class="empty-state hidden">
+            <div class="empty-icon">👨‍🌾</div>
+
+            <h3>No labour available</h3>
+
+            <p>Be the first person to add your labour profile.</p>
+
+            <button class="small-add-button" onclick="openLabourModal()">
+              + Add Yourself
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="info-box">
+       
+
+        <!-- <p><img
+                  height="25px"
+                  width="25px"
+                  src="icons/info_icon.png"
+                  alt="info icon"
+              />  -->
+          If you want to show your profile in this list, click on
+          <strong>"Add Yourself"</strong>
+          and fill your details.
+        </p>
+      </section>
+    </main>
+
+    <!-- ADD LABOUR MODAL -->
+
+    <div id="labourModal" class="modal-overlay">
+      <div class="modal">
+        <div class="modal-header">
+          <div>
+            <h2>Add Yourself</h2>
+
+            <p>Enter your labour details</p>
+          </div>
+
+          <button class="close-button" onclick="closeLabourModal()">✕</button>
+        </div>
+
+        <form id="labourForm" onsubmit="addLabour(event)">
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Name</label>
+
+              <input
+                id="name"
+                type="text"
+                placeholder="Enter your name"
+                required />
+            </div>
+
+            <div class="form-group">
+              <label>Village</label>
+
+              <input
+                id="village"
+                type="text"
+                placeholder="Enter village"
+                required />
+            </div>
+
+            <div class="form-group">
+              <label>Age</label>
+
+              <input
+                id="age"
+                type="number"
+                min="18"
+                placeholder="Age"
+                required />
+            </div>
+
+            <div class="form-group">
+              <label>Work Type</label>
+
+              <select id="workType" required>
+                <option value="">Select work</option>
+
+                <option>Harvesting</option>
+
+                <option>Ploughing</option>
+
+                <option>Sowing</option>
+
+                <option>Irrigation</option>
+
+                <option>Spraying</option>
+
+                <option>Farm Labour</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label> Experience (Years) </label>
+
+              <input
+                id="experience"
+                type="number"
+                min="0"
+                placeholder="Years"
+                required />
+            </div>
+
+            <div class="form-group">
+              <label> Expected Salary / Day </label>
+
+              <input
+                id="expectedSalary"
+                type="number"
+                placeholder="₹ per day"
+                required />
+            </div>
+
+            <div class="form-group">
+              <label> Mobile Number </label>
+
+              <input
+                id="phone"
+                type="tel"
+                maxlength="10"
+                placeholder="10 digit number"
+                required />
+            </div>
+
+            <div class="form-group">
+              <label> Availability </label>
+
+              <select id="availability">
+                <option value="Available">Available</option>
+
+                <option value="Busy">Busy</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label> Short Description </label>
+
+            <textarea
+              id="description"
+              rows="3"
+              >
+            </textarea>
+          </div>
+
+          <div class="form-actions">
+            <button
+              type="button"
+              class="cancel-button"
+              onclick="closeLabourModal()">
+              Cancel
+            </button>
+
+            <button type="submit" class="submit-button">Add Profile</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- DETAILS MODAL -->
+
+    <div id="detailsModal" class="modal-overlay">
+      <div class="modal">
+        <div class="modal-header">
+          <div>
+            <h2 id="detailsName">Labour Details</h2>
+
+            <p id="detailsVillage"></p>
+          </div>
+
+          <button class="close-button" onclick="closeDetailsModal()">✕</button>
+        </div>
+
+        <div id="detailsContent" class="details-content"></div>
+      </div>
+    </div>
+     <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <h2>KisanMitra</h2>
+          </div>
+
+          <p>
+            Empowering farmers with technology
+            <br />
+            and trusted services.
+          </p>
+
+          <div class="social-icons">
+            <a href="#"
+              ><img
+                height="35px"
+                width="35px"
+                src="icons/facebook_icon.png"
+                alt="facebook"
+            /></a>
+            <a href="#"
+              ><img
+                height="35px"
+                width="35px"
+                src="icons/instagram_icon.png"
+                alt="instagram"
+            /></a>
+            <a href="#"
+              ><img height="35px" width="35px" src="icons/xapp_icon.png" alt="x"
+            /></a>
+            <a href="#"
+              ><img
+                height="35px"
+                width="35px"
+                src="icons/youtube_icon.png"
+                alt="youtube"
+            /></a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+
+          <a href="index.html">Home</a>
+          <a href="#">Services</a>
+          <a href="weather.html">Weather</a>
+          <a href="#">Community</a>
+          <a href="#">About Us</a>
+        </div>
+
+        <div class="footer-column">
+          <h3>Support</h3>
+
+          <a href="#">Help Center</a>
+          <a href="#">Contact Us</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+        </div>
+
+        <div class="footer-column contact-column">
+          <h3>Contact Us</h3>
+
+          <p>
+            <img
+              height="20px"
+              width="20px"
+              src="icons/phone-call_icon.png"
+              alt="mobile" />
+            &nbsp; +91 1234567890
+          </p>
+
+          <p>
+            <img height="20px" width="20px" src="icons/email_icon.png" alt="mail" />
+            &nbsp; support@kisanmitra.com
+          </p>
+
+          <p>
+            <img
+              height="20px"
+              width="20px"
+              src="icons/location_icon2.png"
+              alt="Location" />
+            &nbsp; Bhiwani, Haryana, India
+          </p>
+        </div>
+      </div>
+
+      <div class="copyright">&copy; 2026 KisanMitra. All rights reserved.</div>
+    </footer>
+
+    <script src="js/labour.js"></script>
+  </body>
+</html>
