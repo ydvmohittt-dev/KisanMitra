@@ -34,6 +34,42 @@
      
     </div>
 
+    <div class="filter-box">
+        <input id="searchLabour" type="text" placeholder="Search by name or village" oninput="filterLabours()">
+
+        <select id="workTypeFilter" onchange="filterLabours()">
+            <option value="">All Work Types</option>
+            <option value="Harvesting">Harvesting</option>
+            <option value="Ploughing">Ploughing</option>
+            <option value="Irrigation">Irrigation</option>
+            <option value="Sowing">Sowing</option>
+            <option value="Spraying">Spraying</option>
+            <option value="Farm Labour">Farm Labour</option>
+        </select>
+
+        <select id="ageFilter" onchange="filterLabours()">
+            <option value="">Any Age</option>
+            <option value="25">Under 25</option>
+            <option value="30">Under 30</option>
+            <option value="40">Under 40</option>
+            <option value="50">Under 50</option>
+        </select>
+
+        <select id="experienceFilter" onchange="filterLabours()">
+            <option value="">Any Experience</option>
+            <option value="2">2+ Years</option>
+            <option value="5">5+ Years</option>
+            <option value="8">8+ Years</option>
+        </select>
+
+        <select id="salaryFilter" onchange="filterLabours()">
+            <option value="">Any Salary</option>
+            <option value="500">Up to ₹500</option>
+            <option value="600">Up to ₹600</option>
+            <option value="700">Up to ₹700</option>
+        </select>
+    </div>
+
       <section class="table-container">
         <div class="table-top">
             <div>
@@ -78,7 +114,11 @@
           <div id="loading" class="loading">Loading labour...</div>
 
           <div id="emptyState" class="empty-state hidden">
-            <div class="empty-icon">👨‍🌾</div>
+            <div class="empty-icon"><img
+              height="45px"
+              width="45px"
+              src="icons/labouricon.png"
+              alt="labour" /></div>
 
             <h3>No labour available</h3>
 
@@ -346,7 +386,7 @@
         </div>
       </div>
 
-      <div class="copyright">&copy; 2026 KisanMitra. All rights reserved.</div>
+      <div class="copyright">&copy; 2026 KisanMitra. Made with ❤️ and 🍵.</div>
     </footer>
 
     <script src="labour.js"></script>

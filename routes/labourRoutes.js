@@ -41,6 +41,15 @@ router.get("/:id", async (req, res) => {
 
 router.post("/", async (req, res) => {
   try {
+    const existingLabour = await Labour.findOne({
+            ownerId: req.body.ownerId
+        });
+
+        if (existingLabour) {
+            return res.status(400).json({
+                message: "You already have a labour profile."
+            });
+        }
     const labour = new Labour(req.body);
 
     const savedLabour = await labour.save();

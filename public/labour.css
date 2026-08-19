@@ -132,7 +132,34 @@ body {
     background: var(--dark-green);
 }
 
+.filter-box {
+    background: rgb(204, 240, 180);
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    border: 1px solid #e5e5e5;
+}
 
+.filter-box input,
+.filter-box select {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    background: white;
+}
+
+.filter-box input { min-width: 220px; flex: 1; }
+.filter-box select { min-width: 150px; }
+
+.filter-box input:focus,
+.filter-box select:focus {
+    outline: none;
+    border-color: #4a8f29;
+}
 .table-container {
   border: 1px solid var(--border);
   border-radius: 15px;

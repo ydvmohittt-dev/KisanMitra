@@ -8,12 +8,26 @@ if (!myUserId) {
 }
 
 // LOAD LABOURS
+let allLabours = [];
 
 const loadLabours = () => {
   fetch("/api/labours")
     .then((response) => response.json())
 
     .then((data) => {
+      allLabours=data.labours;
+      showLabours(allLabours);
+        })
+
+    .catch((error) => {
+      console.log(error);
+
+      document.getElementById("loading").innerText =
+        "Unable to load labour data.";
+    });
+};
+
+const showLabours = labours => {
       const table = document.getElementById("labourTableBody");
 
       const loading = document.getElementById("loading");
@@ -25,16 +39,16 @@ const loadLabours = () => {
       loading.classList.add("hidden");
 
       document.getElementById("labourCount").innerText =
-        data.labours.length + " labour";
+        labours.length + " labour";
 
-      if (data.labours.length === 0) {
+      if (labours.length === 0) {
         empty.classList.remove("hidden");
         return;
       }
 
       empty.classList.add("hidden");
 
-      data.labours.forEach((labour) => {
+      labours.forEach((labour) => {
         const row = document.createElement("tr");
 
         // Check if this is my profile
@@ -118,14 +132,54 @@ const loadLabours = () => {
 
         table.appendChild(row);
       });
-    })
+    };
+  
 
-    .catch((error) => {
-      console.log(error);
+const filterLabours = () => {
 
-      document.getElementById("loading").innerText =
-        "Unable to load labour data.";
+    const search = document.getElementById("searchLabour")
+        .value.toLowerCase();
+
+    const workType = document.getElementById("workTypeFilter").value;
+    const maxAge = document.getElementById("ageFilter").value;
+    const minExperience = document.getElementById("experienceFilter").value;
+    const maxSalary = document.getElementById("salaryFilter").value;
+
+    const filteredLabours = allLabours.filter(labour => {
+
+        const name = labour.name.toLowerCase();
+        const village = labour.village.toLowerCase();
+
+        if (!name.includes(search) && !village.includes(search)) {
+            return false;
+        }
+
+        if (workType !== "" && labour.workType !== workType) {
+            return false;
+        }
+
+        if (maxAge !== "" && Number(labour.age) > Number(maxAge)) {
+            return false;
+        }
+
+        if (
+            minExperience !== "" &&
+            Number(labour.experience) < Number(minExperience)
+        ) {
+            return false;
+        }
+
+        if (
+            maxSalary !== "" &&
+            Number(labour.expectedSalary) > Number(maxSalary)
+        ) {
+            return false;
+        }
+
+        return true;
     });
+
+    showLabours(filteredLabours);
 };
 
 // OPEN ADD LABOUR MODAL
