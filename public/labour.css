@@ -76,17 +76,21 @@ body {
   margin-top: 10px;
   width: 100%;
   height: 400px;
-  background-color: wheat;
-  /* background-image: url("C:\Users\91720\Desktop\labour\ChatGPT Image Aug 18, 2026, 04_41_57 PM.png"); */
-  background-size: cover;
+ 
+  inset: 2px;
+     /* background-image: linear-gradient(
+    rgba(255, 255, 255, 0.25),
+    rgba(255, 255, 255, 0.25)
+  ), url("images/labour.png"); */
+  background-image: url(images/mandi.png);
   background-repeat: no-repeat;
-  background-position: 50% 16%;
-  opacity: 90%;
+  background-position: 50% 46%;
+  /* opacity: 90%; */
   margin-bottom: 20px;
 }
 .intro p {
   color: black;
-  font-size: 450%;
+  font-size: 500%;
   margin-left: 90px;
   margin-top: -52px;
   margin-bottom: -1%;
@@ -105,7 +109,7 @@ body {
 
   margin-left: 90px;
   font-weight: 600;
-  font-size: 140%;
+  font-size: 160%;
   margin-top: 10px;
   font-style: italic;
 }
@@ -363,19 +367,36 @@ td {
   grid-template-columns: 1fr 1fr;
   gap: 12px;
 }
+.details-content #item5 {
+  grid-column: 1 / -1;
+}
 
 .detail-item {
-  background: #f5faf3;
+  background: #e4f9dc;
   padding: 14px;
   border-radius: 7px;
 }
 
-.detail-item span {
+
+.detail-item strong {
   display: block;
-  color: var(--muted);
-  font-size: 12px;
+  color: #000205;
+  font-size: 20px;
+   font-weight: 600;
   margin-bottom: 5px;
 }
+.detail-item span{
+         display: block;
+    color: #000205;
+    font-size: 22px;
+   font-weight: 400;
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+
+
+
 .footer {
   width: 100%;
 

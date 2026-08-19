@@ -233,13 +233,13 @@ const viewDetails = (id) => {
     .then((labour) => {
       document.getElementById("detailsName").innerText = labour.name;
 
-      document.getElementById("detailsVillage").innerText = labour.village;
+      document.getElementById("detailsVillage").innerText =`From: ${labour.village}`;
 
       document.getElementById("detailsContent").innerHTML = `
 
                 <div class="detail-item">
 
-                    <span>Age</span>
+                    <span>Age:</span>
 
                     <strong>
                         ${labour.age} Years
@@ -250,7 +250,7 @@ const viewDetails = (id) => {
 
                 <div class="detail-item">
 
-                    <span>Work Type</span>
+                    <span>Work Type:</span>
 
                     <strong>
                         ${labour.workType}
@@ -261,7 +261,7 @@ const viewDetails = (id) => {
 
                 <div class="detail-item">
 
-                    <span>Experience</span>
+                    <span>Experience:</span>
 
                     <strong>
                         ${labour.experience} Years
@@ -272,7 +272,7 @@ const viewDetails = (id) => {
 
                 <div class="detail-item">
 
-                    <span>Expected Salary</span>
+                    <span>Expected Salary:</span>
 
                     <strong>
                         ₹${labour.expectedSalary}/day
@@ -283,7 +283,7 @@ const viewDetails = (id) => {
 
                 <div class="detail-item">
 
-                    <span>Availability</span>
+                    <span>Availability:</span>
 
                     <strong>
                         ${labour.availability}
@@ -294,7 +294,7 @@ const viewDetails = (id) => {
 
                 <div class="detail-item">
 
-                    <span>Contact</span>
+                    <span>Contact:</span>
 
                     <strong>
                         ${labour.phone}
@@ -303,9 +303,9 @@ const viewDetails = (id) => {
                 </div>
 
 
-                <div class="detail-item">
+                <div id="item5" class="detail-item .item5">
 
-                    <span>Description</span>
+                    <span>Description:</span>
 
                     <strong>
                         ${labour.description || "No description"}
