@@ -43,15 +43,10 @@ export const getMachineryById = async (req, res) => {
 
 export const addMachinery = async (req, res) => {
   try {
-    const farmer = await User.findById(req.user.id);
-
     const machine = new Machinery({
       ...req.body,
-      ownerId: req.user.id,
-      village: req.body.village || farmer.village,
-      city: req.body.city || farmer.city,
+      ownerId: req.user.id
     });
-
     const savedMachine = await machine.save();
     res.status(201).json(savedMachine);
   } catch (error) {
