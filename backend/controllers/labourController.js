@@ -47,16 +47,7 @@ export const addLabour = async (req, res) => {
     if (existingLabour) {
       return res.status(400).json({ message: "You already have a labour profile." });
     }
-
-    const farmer = await User.findById(req.user.id);
-
-    const labour = new Labour({
-      ...req.body,
-      ownerId: req.user.id,
-      village: req.body.village || farmer.village,
-      city: req.body.city || farmer.city,
-    });
-
+    const labour = new Labour({...req.body,ownerId: req.user.id});
     const savedLabour = await labour.save();
     res.status(201).json(savedLabour);
   } catch (error) {
