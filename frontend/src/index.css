@@ -215,6 +215,9 @@ button {
   font-size: 14px;
   line-height: 1.6;
 }
+.footer-column-2{
+  margin-left:8px;
+}
 
 .footer-column h3 {
   color: #fff;
@@ -235,7 +238,8 @@ button {
   translate: 1px;
 }
 .footer-brand {
-  margin-left: 30px;
+  margin-left: 8px;
+  margin-top: 13px;
 }
 .contact-column p {
   display: flex;
