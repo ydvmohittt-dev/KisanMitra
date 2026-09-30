@@ -17,7 +17,7 @@ const Footer = () => (
         <Link to="/finance">Finance</Link>
       </div>
 
-      <div className="footer-column">
+      <div className=" footer-column footer-column-2">
         <h3>Services</h3>
         <Link to="/labour">Labour</Link>
         <Link to="/machinery">Rent Machinery</Link>
