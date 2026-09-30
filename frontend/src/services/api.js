@@ -1,4 +1,4 @@
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+const API_URL = import.meta.env.VITE_API_URL || " https://kisanmitra-y5so.onrender.com/api";
 
 // One small helper for all API calls. It adds the JWT and returns JSON.
 export const apiRequest = async (path, options = {}) => {
