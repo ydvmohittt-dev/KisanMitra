@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import {  FiMenu, FiX, FiLogOut, FiUser } from "react-icons/fi";
-
+import { Leaf } from "lucide-react";
 import { apiRequest } from "../services/api";
 import { isLoggedIn, logout } from "../services/auth";
 
@@ -21,7 +21,7 @@ const Navbar = () => {
   return (
     <header className="main-header">
       <Link to="/" className="logo">
-      
+      <Leaf size={24}/>
         KisanMitra
       </Link>
 
