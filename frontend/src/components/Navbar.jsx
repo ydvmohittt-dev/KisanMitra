@@ -21,7 +21,7 @@ const Navbar = () => {
   return (
     <header className="main-header">
       <Link to="/" className="logo">
-      <Leaf size={24}/>
+      
         KisanMitra
       </Link>
 
