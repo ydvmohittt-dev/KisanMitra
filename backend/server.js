@@ -14,10 +14,16 @@ dotenv.config();
 
 const app = express();
 
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://bill-flow-ashen.vercel.app",
+];
+
 app.use(
   cors({
-    origin: process.env.CLIENT_ORIGIN?.split(",") || "http://localhost:5173",
-  }),
+    origin: allowedOrigins,
+    credentials: true,
+  })
 );
 
 app.use(express.json());
