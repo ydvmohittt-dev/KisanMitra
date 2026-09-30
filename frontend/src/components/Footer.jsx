@@ -26,8 +26,8 @@ const Footer = () => (
 
       <div className="footer-column contact-column">
         <h3>Contact</h3>
-        <p><FiPhone size={15} /> +91 1234567890</p>
-        <p><FiMail size={15} /> support@kisanmitra.com</p>
+        <p><FiPhone size={15} /> +91 7206359853</p>
+        <p><FiMail size={15} /> mohityadaviiitb@gmail.com</p>
         <p><FiMapPin size={15} /> Haryana, India</p>
       </div>
     </div>
