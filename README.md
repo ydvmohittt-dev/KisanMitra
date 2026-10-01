@@ -16,8 +16,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
 
-**🔗 Live App:** [kisan-mitra-pearl.vercel.app](https://kisan-mitra-pearl.vercel.app) &nbsp;·&nbsp;
-
+**🔗 Live App:** [kisan-mitra-pearl.vercel.app](https://kisan-mitra-pearl.vercel.app) &nbScreeShots
  **⚙️ API:** [kisanmitra-y5so.onrender.com](https://kisanmitra-y5so.onrender.com/)
 
 ---
@@ -51,36 +50,36 @@ The project is built as a complete, production-style application: a REST API wit
 
 **Login**
 
-![Login](./docs/screenshots/Login.png)
+![Login](./docs/ScreenShots/Login.png)
 
 **Dashboard**
 
-![Dashboard](./docs/screenshots/Dashboard.png)
+![Dashboard](./docs/ScreenShots/Dashboard.png)
 
 **Services**
 
-![Services](./docs/screenshots/Services.png)
+![Services](./docs/ScreenShots/Services.png)
 
 **Weather**
 
-![Weather](./docs/screenshots/Weather.png)
+![Weather](./docs/ScreenShots/Weather.png)
 
 
 **Hire Labour**
 
-![Labour](./docs/screenshots/Labour.png)
+![Labour](./docs/ScreenShots/Labour.png)
 
 **Rent Machinery**
 
-![Machinery](./docs/screenshots/Machinery.png)
+![Machinery](./docs/ScreenShots/Machinery.png)
 
 **Finance Tracker**
 
-![Finance](./docs/screenshots/Finance.png)
+![Finance](./docs/ScreenShots/Finance.png)
 
 **Finance Entry**
 
-![Finance Entry](./docs/screenshots/Finance-entry.png)
+![Finance Entry](./docs/ScreenShots/Finance-entry.png)
 
 ---
 
