@@ -16,7 +16,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
 
-**🔗 Live App:** [kisan-mitra-pearl.vercel.app](https://kisan-mitra-pearl.vercel.app) &nbScreeShots
+**🔗 Live App:** [kisan-mitra-pearl.vercel.app](https://kisan-mitra-pearl.vercel.app) 
  **⚙️ API:** [kisanmitra-y5so.onrender.com](https://kisanmitra-y5so.onrender.com/)
 
 ---
