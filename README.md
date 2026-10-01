@@ -4,13 +4,21 @@
 **A full-stack digital assistant for farmers — check local weather, track live mandi prices, hire labour, rent machinery, and manage farm finances, all from one simple platform.**
 
 [![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)](https://react.dev/)
+
 [![Vite](https://img.shields.io/badge/Vite-8.0-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
+
 [![Node.js](https://img.shields.io/badge/Node.js-Express-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
+
 [![MongoDB](https://img.shields.io/badge/MongoDB-Mongoose-47A248?logo=mongodb&logoColor=white)](https://www.mongodb.com/)
+
 [![JWT](https://img.shields.io/badge/Auth-JWT-000000?logo=jsonwebtokens&logoColor=white)](https://jwt.io/)
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
-**🔗 Live App:** [kisan-mitra-pearl.vercel.app](https://kisan-mitra-pearl.vercel.app) &nbsp;·&nbsp; **⚙️ API:** [kisanmitra-y5so.onrender.com](https://kisanmitra-y5so.onrender.com/)
+
+**🔗 Live App:** [kisan-mitra-pearl.vercel.app](https://kisan-mitra-pearl.vercel.app) &nbsp;·&nbsp;
+
+ **⚙️ API:** [kisanmitra-y5so.onrender.com](https://kisanmitra-y5so.onrender.com/)
 
 ---
 
@@ -40,34 +48,39 @@ The project is built as a complete, production-style application: a REST API wit
 
 ## Screenshots
 
-<!--
-  Add your screenshots below by replacing the placeholder text with:
-  ![Description](./docs/screenshots/your-image.png)
--->
 
-**Home**
+**Login**
 
-<!-- ![Home](./docs/screenshots/home.png) -->
+![Login](./docs/screenshots/Login.png)
 
 **Dashboard**
 
-<!-- ![Dashboard](./docs/screenshots/dashboard.png) -->
+![Dashboard](./docs/screenshots/Dashboard.png)
+
+**Services**
+
+![Services](./docs/screenshots/Services.png)
 
 **Weather**
 
-<!-- ![Weather](./docs/screenshots/weather.png) -->
+![Weather](./docs/screenshots/Weather.png)
 
-**Live Mandi Prices**
 
-<!-- ![Mandi Prices](./docs/screenshots/mandi.png) -->
+**Hire Labour**
 
-**Hire Labour / Rent Machinery**
+![Labour](./docs/screenshots/Labour.png)
 
-<!-- ![Labour and Machinery](./docs/screenshots/labour-machinery.png) -->
+**Rent Machinery**
+
+![Machinery](./docs/screenshots/Machinery.png)
 
 **Finance Tracker**
 
-<!-- ![Finance](./docs/screenshots/finance.png) -->
+![Finance](./docs/screenshots/Finance.png)
+
+**Finance Entry**
+
+![Finance Entry](./docs/screenshots/Finance-entry.png)
 
 ---
 
